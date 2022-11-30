@@ -1,0 +1,80 @@
+/* ===
+Gutters
+=== */
+
+/* ===
+Only used in layout and grid system
+=== */
+$gapSmall: 12px;
+$gapMedium: 14px;
+$gapBig: 26px;
+
+/* ===
+Vertical
+=== */
+$gutterVerticalBiggestest: 40px;
+$gutterVerticalBiggest: 30px;
+$gutterVerticalBigger: 25px;
+$gutterVerticalBig: 20px;
+$gutterVertical: 16px;
+$gutterVerticalSmall: 12px;
+$gutterVerticalSmaller: 8px;
+$gutterVerticalSmallest: 4px;
+
+/* ===
+Horizontal
+=== */
+$gutterHorizontalBiggestest: 40px;
+$gutterHorizontalBiggest: 30px;
+$gutterHorizontalBigger: 25px;
+$gutterHorizontalBig: 20px;
+$gutterHorizontal: 16px;
+$gutterHorizontalSmall: 12px;
+$gutterHorizontalSmaller: 8px;
+$gutterHorizontalSmallest: 4px;
+
+/* ===
+Border Radius
+=== */
+$borderRadiusBase: 4px;
+
+/* ===
+Transitions
+=== */
+$transitionStandard: all 0.6s ease-in-out;
+$transitionEasy: cubic-bezier(0.17, 0.04, 0.03, 0.94);
+$transitionInOut: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$transparent: transparent;
+$currentColor: currentcolor;
+
+/* ===
+Form
+=== */
+$formFieldHeight: 48px;
+
+/* ===
+Navbar
+=== */
+$navbarHeightMobile: 65px;
+$navbarHeightDesktop: 81px;
+$topSectionHeight: 36px;
+
+/* ===
+Icons
+Note: codes depends on build
+=== */
+$icon-caret-down-unicode: "\ea03";
+$icon-caret-right-unicode: "\ea05";
+$icon-caret-up-unicode: "\ea06";
+$icon-check-unicode: "\ea07";
+$icon-close-unicode: "\ea08";
+$icon-full-screen-unicode: "\ea10";
+$icon-full-screen-exit-unicode: "\ea0f";
+$icon-mute-unicode: "\ea1a";
+$icon-play-unicode: "\ea1b";
+$icon-quote-unicode: "\ea1e";
+$icon-volume-unicode: "\ea21";
+$icon-plus-unicode: "\ea1c";
+$icon-minus-unicode: "\ea19";
+
+$icon-font-name: "_essity-icons";

@@ -1,0 +1,183 @@
+/* ===
+Brand Colors
+=== */
+$colorBrandPrimary: #00005a; // hsla(240, 100%, 18%, 1)
+$colorBrandSecondary: #f50082; // hsla(328, 100%, 48%,1)
+$colorBrandTertiary: #fff; // hsla(0, 0%, 100%,1)
+
+/* ===
+Neutral colors
+=== */
+$colorNeutralDarkest: #000; // hsla(0, 0%, 0%,1)
+$colorNeutralDarker: #8a8a8d; // hsla(240, 1%, 55%,1)
+$colorNeutralDark: #b9b9ba; // hsl(240, 1%, 73%)
+$colorNeutral: #e7e7e8; // hsl(240, 2%, 91%)
+$colorNeutralLight: #f4f4f4; // hsl(0, 0%, 96%)
+$colorNeutralLighter: #f9f9f9; // hsl(0, 0%, 98%)
+$colorNeutralLightest: #fff; // hsla(0, 0%, 100%,1)
+
+/* ===
+State and action colors
+=== */
+$colorAction: #09f; // hsla(204, 100%, 50%, 1)
+$colorActionLight: #66c1ff; // rgba($colorAction, 0.6) hsla(204, 100%, 50%, 0.6)
+$colorActionLighter: #cceaff; // rgba($colorAction, 0.2) hsla(204, 100%, 50%, 0.2)
+
+$colorInfo: #ff8200; // hsla(31, 100%, 50%, 1)
+$colorInfoLight: #ffb466; // rgba($colorInfo, 0.6) hsla(31, 100%, 50%, 0.6)
+$colorInfoLighter: #ffe6cc; // rgba($colorInfo, 0.2) hsla(31, 100%, 50%, 0.2)
+
+$colorError: #ed001d;
+$colorSuccess: #009a44;
+
+/* ===
+Txt colors
+=== */
+$colorTxtBase: $colorNeutralDarkest;
+
+.txt-primary {
+  color: $colorBrandPrimary;
+}
+
+.txt-secondary {
+  color: $colorBrandSecondary;
+}
+
+.txt-tertiary {
+  color: $colorBrandTertiary;
+}
+
+.txt-neutral-dark {
+  color: $colorNeutralDark;
+}
+
+.txt-neutral-darker {
+  color: $colorNeutralDarker;
+}
+
+.txt-neutral-darkest {
+  color: $colorNeutralDarkest;
+}
+
+.txt-neutral-lightest {
+  color: $colorNeutralLightest;
+}
+
+.txt-action {
+  color: $colorAction;
+}
+
+.txt-action-light {
+  color: $colorActionLight;
+}
+
+/* ===
+Links
+=== */
+a.txt-primary {
+  &:hover {
+    color: $colorBrandSecondary;
+  }
+}
+
+/* ===
+Background Brand colors
+=== */
+.bg-primary {
+  background-color: $colorBrandPrimary;
+  color: $colorNeutralLightest;
+
+  .btn-action {
+    background-color: $colorNeutralLightest;
+    color: $colorBrandPrimary;
+  }
+}
+
+.bg-secondary {
+  background-color: $colorBrandSecondary;
+  color: $colorNeutralLightest;
+
+  .btn-action {
+    background-color: $colorNeutralLightest;
+    color: $colorBrandSecondary;
+  }
+}
+
+.bg-primary,
+.bg-secondary {
+  a,
+  .btn--link {
+    color: $colorNeutralLightest;
+  }
+
+  .slash::before {
+    background-color: $colorNeutralLightest;
+  }
+}
+
+.bg-tertiary {
+  background-color: $colorBrandTertiary;
+  color: $colorNeutralDarkest;
+
+  a,
+  .btn--link {
+    color: $colorBrandSecondary;
+  }
+
+  .slash::before {
+    background-color: $colorBrandSecondary;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: $colorBrandPrimary;
+  }
+
+  .label {
+    color: $colorBrandPrimary;
+  }
+}
+
+/* ===
+Background Neutral colors
+=== */
+.bg-neutral-lightest {
+  background-color: $colorNeutralLightest;
+  color: $colorNeutralDarkest;
+}
+
+.bg-tertiary,
+.bg-neutral-lightest {
+  .btn-action {
+    background-color: $colorBrandSecondary;
+    color: $colorNeutralLightest;
+  }
+}
+
+/* ===
+Box shadow
+=== */
+$boxShadow: 0 0 6px 0 rgb(0 0 0 / 20%);
+
+/*
+ * Doughnut-chart label colors.
+ * This colors needs to be the same as the defined ones in
+ * "src/app/setting/colors.ts".
+ */
+$list-colors: (
+  $colorAction,
+  $colorBrandPrimary,
+  $colorBrandSecondary,
+  #009a44,
+  #7cb5ec,
+  #434348,
+  #90ed7d,
+  #f7a35c,
+  #8085e9,
+  #f15c80,
+  #e4d354,
+  #8085e8,
+  #8d4653,
+  #91e8e1
+);

@@ -1,0 +1,253 @@
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app">
+      <form id="form" action="" class="js-form form">
+        <!-- Hidden field START -->
+        <div class="flex">
+          <div class="js-field form-field hidden">
+            <label class="label" for="">Hidden</label>
+            <div class="form-field-content">
+              <input
+                id="hidden"
+                class="form-element"
+                name="person.hiddenInfo"
+                type="text"
+                placeholder="Hidden info"
+                autocomplete="off"
+                data-rule="required|name"
+              />
+              <i class="i i-alert" aria-hidden="true"></i>
+            </div>
+            <div class="form-message-wrapper">
+              <div class="js-form-message message">
+                Enter a valid input
+              </div>
+            </div>
+          </div>
+          <button type="button" class="js-show-field btn btn--secondary">
+            Show Field
+          </button>
+        </div>
+        <!-- Hidden field END -->
+
+        <!-- Text input field START -->
+        <div class="js-field form-field">
+          <label class="label" for="">First Name</label>
+          <div class="form-field-content">
+            <input
+              id="firstName"
+              class="form-element"
+              name="person.firstName"
+              type="text"
+              placeholder="First Name"
+              autocomplete="off"
+              data-rule="required|name"
+            />
+            <i class="i i-alert" aria-hidden="true"></i>
+          </div>
+          <div class="form-message-wrapper">
+            <div class="js-form-message message">
+              Enter a valid input
+            </div>
+          </div>
+        </div>
+        <!-- Text input field END -->
+
+        <!-- Text input field START -->
+        <div class="js-field form-field">
+          <label class="label" for="lastName">Last Name</label>
+          <div class="form-field-content">
+            <input
+              id="lastName"
+              class="form-element"
+              name="person.lastName"
+              autocomplete="off"
+              type="text"
+              placeholder="Last Name"
+              data-rule="required|minLength-4|maxLength-10"
+              value="Ne"
+            />
+            <i class="i i-alert inside inside--right" aria-hidden="true"></i>
+          </div>
+          <div class="form-message-wrapper">
+            <div class="js-form-message message">
+              Enter a valid input
+            </div>
+          </div>
+        </div>
+        <!-- Text input field END -->
+
+        <!-- Text input field START -->
+        <div class="js-field form-field">
+          <label class="label" for="email">Email</label>
+          <div class="form-field-content">
+            <input
+              id="email"
+              class="form-element"
+              name="email"
+              type="email"
+              autocomplete="off"
+              placeholder="Email address"
+              data-rule="required|email"
+            />
+            <i class="i i-alert inside inside--right" aria-hidden="true"></i>
+          </div>
+          <div class="form-message-wrapper">
+            <div class="js-form-message message">
+              Enter a valid input
+            </div>
+          </div>
+        </div>
+        <!-- Text input field END -->
+
+        <!-- Text input field START -->
+        <div class="js-field form-field">
+          <label class="label" for="disabled">Disabled</label>
+          <div class="form-field-content">
+            <input
+              id="disabled"
+              class="form-element"
+              name="disabled"
+              type="text"
+              placeholder="Last Name"
+              data-rule="required"
+              value="Disabled"
+              disabled
+            />
+            <i class="i i-alert inside inside--right" aria-hidden="true"></i>
+          </div>
+          <div class="form-message-wrapper">
+            <div class="js-form-message message">
+              Enter a valid input
+            </div>
+          </div>
+        </div>
+        <!-- Text input field END -->
+
+        <!-- Checkbox START -->
+        <div class="js-field form-field">
+          <p class="label">Choose</p>
+          <div class="form-field-content">
+            <div class="checkbox-wrapper">
+              <input
+                type="checkbox"
+                name="categories"
+                value="category-1"
+                data-rule="required"
+                checked
+              />
+              <p class="small">Option one without label</p>
+            </div>
+            <div class="checkbox-wrapper">
+              <input
+                id="label-option"
+                type="checkbox"
+                name="categories"
+                value="category-2"
+                data-rule="required"
+              />
+              <label for="label-option" class="small"
+                >Option without label</label
+              >
+            </div>
+            <div class="checkbox-wrapper">
+              <input
+                type="checkbox"
+                name="categories"
+                value="category-3"
+                data-rule="required"
+                checked
+              />
+              <p class="small">Option tree</p>
+            </div>
+          </div>
+          <div class="form-message-wrapper">
+            <div class="js-form-message message"></div>
+          </div>
+        </div>
+        <!-- Checkbox END -->
+
+        <!-- Radio buttons START -->
+        <div class="js-field form-field">
+          <p class="label">Choose between</p>
+          <div class="form-field-content">
+            <div class="checkbox-wrapper">
+              <input
+                type="radio"
+                name="options"
+                value="option-1"
+                data-rule="required"
+                checked
+              />
+              <p class="small">Option one</p>
+            </div>
+            <div class="checkbox-wrapper">
+              <input
+                type="radio"
+                name="options"
+                value="option-2"
+                data-rule="required"
+                checked
+              />
+              <p class="small">Option two</p>
+            </div>
+          </div>
+        </div>
+        <!-- Radio buttons END -->
+
+        <!-- Select One START -->
+        <div class="js-field form-field">
+          <select
+            type="select-one"
+            class="js-example-basic-single"
+            name="state"
+          >
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="SR">Serbia</option>
+          </select>
+        </div>
+        <!-- Select One END -->
+
+        <!-- Select One START -->
+        <div class="js-field form-field">
+          <select
+            type="select-multiple"
+            class="js-example-basic-single"
+            name="stateMultipele"
+            multiple
+          >
+            <option value="AL">Alabama</option>
+            <option value="WY">Wyoming</option>
+            <option value="SR">Serbia</option>
+          </select>
+        </div>
+        <!-- Select One END -->
+        <!-- Select One START -->
+        <div class="js-field form-field">
+          <label for="customRange2" class="form-label">Example range</label>
+          <input
+            type="range"
+            name="range"
+            class="form-range"
+            data-slider-min="1"
+            data-slider-max="3"
+            data-slider-step="1"
+            id="customRange2"
+          />
+        </div>
+        <!-- Select One END -->
+        <div class="form-actions">
+          <button type="submit" class="btn btn--primary">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="src/index.ts"></script>
+  </body>
+</html>
