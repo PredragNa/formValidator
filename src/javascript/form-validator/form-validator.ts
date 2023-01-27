@@ -21,8 +21,6 @@ export default class FormValidator {
 
   messages: Message;
 
-  fieldFactory: FieldFactory;
-
   onSuccess: (state: FormState) => void;
 
   onError: () => void;
