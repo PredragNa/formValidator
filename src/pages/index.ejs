@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <title>Form validator</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <div id="app">
+    <form id="form" action="" class="js-form form" data-messages='{
+      "required": {
+        "empty": "This field is required",
+        "incorrect": "Incorrect value"
+      },
+      "name": {
+        "empty": "Please, enter your name" ,
+        "incorrect": "Incorrect name"
+      },
+      "email": {
+        "empty": "Please, enter your email address",
+        "incorrect": "Incorrect email address"
+      },
+      "minLength": {
+        "empty": "Please, enter at least {0} characters",
+        "incorrect": "You have entered less than {0} characters"
+      },
+      "maxLength": {
+        "empty": "Please, enter at maximum {0} characters",
+        "incorrect": "You have entered more than {0} characters"
+      },
+      }'>
+      <!-- Text input field START -->
+      <div class="js-field form-field">
+        <label class="label" for="">First Name</label>
+        <div class="form-field-content">
+          <input id="firstName" class="form-element" name="person.firstName" type="text" placeholder="First Name"
+            autocomplete="off" data-rule="required|name" />
+          <i class="js-info-icon i" aria-hidden="true"></i>
+        </div>
+        <div class="form-message-wrapper">
+          <div class="js-form-message message">
+            Enter a valid input
+          </div>
+        </div>
+      </div>
+      <!-- Text input field END -->
+
+      <!-- Text input field START -->
+      <div class="js-field form-field">
+        <label class="label" for="lastName">Last Name</label>
+        <div class="form-field-content">
+          <input id="lastName" class="form-element" name="person.lastName" autocomplete="off" type="text"
+            placeholder="Last Name" data-rule="required|minLength-4|maxLength-10" value="Ne" />
+          <i class="js-info-icon i" aria-hidden="true"></i>
+        </div>
+        <div class="form-message-wrapper">
+          <div class="js-form-message message"></div>
+        </div>
+      </div>
+      <!-- Text input field END -->
+
+      <!-- Text input field START -->
+      <div class="js-field form-field">
+        <label class="label" for="email">Email</label>
+        <div class="form-field-content">
+          <input id="email" class="form-element" name="email" type="email" autocomplete="off"
+            placeholder="Email address" data-rule="required|email" />
+          <i class="js-info-icon i" aria-hidden="true"></i>
+        </div>
+        <div class="form-message-wrapper">
+          <div class="js-form-message message"></div>
+        </div>
+      </div>
+      <!-- Text input field END -->
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
