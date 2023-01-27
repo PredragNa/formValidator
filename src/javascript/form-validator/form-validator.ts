@@ -1,6 +1,13 @@
 import FieldFactory from './field.factory';
 import {
-  FormField, FormMethods, FormState, Field, Register, UnRegister, Update, Message,
+  FormField,
+  FormMethods,
+  FormState,
+  Field,
+  Register,
+  UnRegister,
+  Update,
+  Message,
 } from './form.interface';
 import { errorMessageHandler } from './helpers/errorHandler';
 import isVisible from './helpers/elements';
@@ -14,22 +21,22 @@ export default class FormValidator {
 
   messages: Message;
 
+  fieldFactory: FieldFactory;
+
   onSuccess: (state: FormState) => void;
 
   onError: () => void;
 
   constructor(
     form: HTMLFormElement,
+    messages: Message,
     onSuccess: (state: FormState) => void,
     onError: () => void,
   ) {
     this.form = form;
+    this.messages = messages;
     this.onSuccess = onSuccess;
     this.onError = onError;
-
-    const messages = form.getAttribute('data-messages');
-
-    this.messages = JSON.parse(messages);
 
     this.formState = {};
 
@@ -45,7 +52,10 @@ export default class FormValidator {
       validateField: fieldFalidator.validateField,
     };
 
-    (() => new FieldFactory(<Field[]>Array.from(this.form.elements), formMethods))();
+    (() => new FieldFactory(
+      <Field[]>Array.from(this.form.elements),
+      formMethods,
+    ))();
   }
 
   // Register form field

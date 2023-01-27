@@ -1,15 +1,19 @@
-/* eslint-disable no-console */
-import FormValidator from './form-validator/form-validator';
+import FormValidator from "./form-validator/form-validator";
+import { FormState, Message } from "./form-validator/form.interface";
 
-// eslint-disable-next-line no-new
-new FormValidator(
-  document.getElementById('form') as HTMLFormElement,
-  (state) => console.log(state),
-  () => console.log('Form has error'),
-);
+const form = document.getElementById("form") as HTMLFormElement;
+const messagesJSON = form.getAttribute("data-messages");
+let messages: Message;
 
-const button = document.querySelector('.js-show-field');
-button?.addEventListener('click', (event) => {
-  const fieldWrapper = (event.target as HTMLButtonElement).closest('.flex');
-  fieldWrapper?.querySelector('.js-field')?.classList.toggle('hidden');
-});
+if (messagesJSON) {
+  messages = JSON.parse(messagesJSON);
+}
+
+if (form && messages) {
+  new FormValidator(
+    form,
+    messages,
+    (state: FormState) => console.log(state),
+    () => console.log("Form has error")
+  );
+}

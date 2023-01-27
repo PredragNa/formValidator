@@ -1,7 +1,5 @@
 const path = require('path');
 
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-
 const loaders = require('./webpack.loaders');
 const plugins = require('./webpack.plugins');
 
@@ -20,7 +18,7 @@ module.exports = (env) => {
     },
     context: path.join(__dirname, '../src'),
     entry: {
-      main: [path.resolve(__dirname, '../src/javascript/index.ts'), path.resolve(__dirname, '../src/stylesheets/app.scss')],
+      main: [path.resolve(__dirname, '../src/javascript/index.ts')],
     },
     output: {
       path: path.resolve(__dirname, '../dist'),
@@ -32,11 +30,6 @@ module.exports = (env) => {
       rules: loaders(env),
     },
     plugins: plugins(env),
-    optimization: {
-      minimizer: [
-        new CssMinimizerPlugin(),
-      ],
-    },
     devServer: {
       historyApiFallback: true,
       static: {
