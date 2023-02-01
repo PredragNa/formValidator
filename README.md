@@ -6,6 +6,19 @@
 
 Form validator (Mediator pattern) represents a class that validates form fields.
 
+## Commands
+
+| Command               | Purpose                                                       |
+| --------------------- | ------------------------------------------------------------- |
+| `npm install`         | Installs all packages                                         |
+| `npm start`           | build for development, watches source folders, live reloading |
+| `npm run prod`        | Builds all assets for a production environment.               |
+| `npm run clean:dist`  | Clean build output folder                                     |
+| `npm run lint:ejs`    | Lint EJS templates                                            |
+| `npm run lint:ts`     | Lint TS files                                                 |
+| `npm run lint:ts-fix` | Fix TS files                                                  |
+
+
 ## Schema
 
 ![diagram](./src/img/form-validator-diagram.jpg)
